@@ -4,6 +4,4 @@ RUN npm install -g @stoplight/spectral
 
 COPY entrypoint.sh /usr/local/bin/
 
-RUN ln -s /usr/local/bin/entrypoint.sh / # backwards compat
-
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
